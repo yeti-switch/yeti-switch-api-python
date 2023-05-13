@@ -1,4 +1,5 @@
 setuptools
 wheel
+twine
 flake8
 black

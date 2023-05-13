@@ -12,6 +12,7 @@ setuptools = "*"
 wheel = "*"
 flake8 = "*"
 black = "*"
+twine = "*"
 
 [requires]
 python_version = "3.9"
