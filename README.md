@@ -1,4 +1,5 @@
 # Yeti-web Admin API SDK
+![tests workflow](https://github.com/yeti-switch/yeti-switch-api-python/actions/workflows/tests.yml/badge.svg)
 
 The documentation for the Yeti-web Admin API can be found [here](https://yeti-switch.org/docs/en/admin-api/index.html).
 
