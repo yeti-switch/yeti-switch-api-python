@@ -66,7 +66,7 @@ print("new_contractor after create", new_contractor.raw_object)
 
 print("new_contractor before update", new_contractor.raw_object)
 new_contractor.vendor = True
-new_contractor.description = 'test'
+new_contractor.description = "test"
 new_contractor.update()
 print("new_contractor after update", new_contractor.raw_object)
 
@@ -74,4 +74,3 @@ contractor = Contractor.find_by_id(new_contractor.id)
 print("contractor found", contractor.raw_object)
 
 print(contractor.creatable_fields())
-

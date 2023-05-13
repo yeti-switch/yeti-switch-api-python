@@ -91,3 +91,7 @@ pipenv run python -m twine upload dist/*
 
 **Notes:** see [this guide](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account) how to set up pypi account
 
+### Upload package to test pypi
+```shell
+pipenv run python -m twine upload -r testpypi dist/*
+```

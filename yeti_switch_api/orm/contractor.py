@@ -18,15 +18,15 @@ class Contractor(BaseModel):
 
     def creatable_fields(self):
         return [
-            'name',
-            'enabled',
-            'vendor',
-            'customer',
-            'description',
-            'address',
-            'phones',
-            'external_id',
-            'smtp_connection'
+            "name",
+            "enabled",
+            "vendor",
+            "customer",
+            "description",
+            "address",
+            "phones",
+            "external_id",
+            "smtp_connection",
         ]
 
     def updatable_fields(self):
