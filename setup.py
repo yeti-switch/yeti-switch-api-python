@@ -4,9 +4,6 @@ from yeti_switch_api import __version__
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = fh.read().split("\n")
-
 setup(
     name="yeti_switch_api",
     version=__version__,
@@ -22,7 +19,7 @@ setup(
     license="MIT",
     packages=["yeti_switch_api"],
     python_requires=">=3.7",
-    install_requires=requirements,
+    install_requires=["jsonapi_requests", "requests"],
     keywords=["yeti-switch", "yeti-web"],
     classifiers=[
         "Intended Audience :: Developers",

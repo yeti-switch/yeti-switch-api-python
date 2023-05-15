@@ -1,16 +1,20 @@
 # Yeti-web Admin API SDK
+
 ![tests workflow](https://github.com/yeti-switch/yeti-switch-api-python/actions/workflows/tests.yml/badge.svg)
+![PyPI](https://img.shields.io/pypi/v/yeti_switch_api)
 
 The documentation for the Yeti-web Admin API can be found [here](https://yeti-switch.org/docs/en/admin-api/index.html).
 
 ## Installation
 
 Install from PyPi using [pip](https://pip.pypa.io/en/latest/), a package manager for Python.
+
 ```shell
 pip3 install yeti-switch-api
 ```
 
 Or download source code and run:
+
 ```shell
 python3 setup.py install
 ```
@@ -18,7 +22,6 @@ python3 setup.py install
 ## Usage
 
 ```python
-
 import yeti_switch_api
 
 yeti_switch_api.orm.OrmClient({
@@ -44,24 +47,47 @@ See `examples/` for detailed usage examples.
 
 ### Requirements
 
-[pipenv](https://pipenv.pypa.io/en/latest/) can be installed via `apt install pipenv`
-
 `Python 3.7+`
+
+Use virtualenv for development. See [the tutorial](https://docs.python.org/3/tutorial/venv.html)
+
+### Prepare environment
+
+Ensure you have a virtualenv for the project
+
+```shell
+python3 -m venv ./.virtualenv
+```
+
+Activate the virtualenv.
+
+```shell
+source ./.virtualenv/bin/activate
+```
 
 ### Install dependencies
 
 ```shell
-pipenv install --dev
+pip install -r requirements.txt
 ```
 
 ### Lint with flake8
+
 ```shell
-pipenv run python -m flake8 . --count --show-source --statistics
+python -m flake8 . --count --show-source --statistics
 ```
 
 ### Fix code format with Black
+
 ```shell
-pipenv run python -m black .
+python -m black .
+```
+
+### Adding new dependencies
+
+```shell
+pip install <PACKAGE>
+pip freeze > requirements.txt
 ```
 
 ## Release
@@ -69,30 +95,37 @@ pipenv run python -m black .
 ### Change `__version_info__` in `yeti_switch_api/__init__.py`
 
 ### Build package
+
 ```shell
-pipenv run python setup.py sdist
-pipenv run python setup.py bdist_wheel
+python setup.py sdist bdist_wheel
+python setup.py bdist_wheel
 ```
-As result you will have files:
+
+As result, you will have files:
+
 ```
 dist/yeti_switch_api-<VERSION>.tar.gz
 dist/yeti_switch_api-<VERSION>-py3-none-any.whl
 ```
 
 ### Check package
+
 ```shell
-pipenv run python -m twine check dist/*
+python -m twine check dist/*
 ```
 
 ### Upload package to [pypi](https://pypi.org/)
 
 ```shell
-pipenv run python -m twine upload dist/*
+python -m twine upload dist/*
 ```
 
-**Notes:** see [this guide](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account) how to set up pypi account
+**Notes:**
+see [this guide](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account)
+how to set up pypi account
 
 ### Upload package to test pypi
+
 ```shell
-pipenv run python -m twine upload -r testpypi dist/*
+python -m twine upload -r testpypi dist/*
 ```
