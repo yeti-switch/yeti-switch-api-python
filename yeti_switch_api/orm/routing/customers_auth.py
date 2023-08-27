@@ -7,4 +7,4 @@ class CustomersAuth(BaseModel):
         type = "customers-auths"
 
     name = AttributeField("name")
-    src_numberlist = RelationField('src_numberlist')
+    src_numberlist = RelationField("src_numberlist")
