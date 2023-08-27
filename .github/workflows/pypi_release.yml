@@ -28,10 +28,17 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt -r requirements_dev.txt
 
+    - name: Calculate version from ${{github.ref}}
+      env:
+        PKG_TAG: ${{github.ref}}
+      shell: bash
+      run: echo "##[set-output name=tag;]$(echo ${PKG_TAG#refs/tags/})"
+      id: extract_tag
+
     - name: build package
       run: python setup.py sdist bdist_wheel
       env:
-        RELEASE_VERSION: ${{github.ref}}
+        RELEASE_VERSION: ${{steps.extract_tag.outputs.tag}}
 
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
