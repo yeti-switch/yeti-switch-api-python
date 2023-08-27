@@ -13,6 +13,7 @@ jobs:
       url: https://pypi.org/p/yeti-switch-api
     permissions:
       id-token: write
+      contents: read
 
     steps:
     - uses: actions/checkout@v2
