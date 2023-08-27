@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from packaging.version import Version
 import os
 
@@ -24,7 +24,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     license="MIT",
-    packages=["yeti_switch_api"],
+    packages=find_packages(exclude=["examples"]),
     python_requires=">=3.7",
     install_requires=requirements,
     keywords=["yeti-switch", "yeti-web"],
