@@ -1,5 +1,6 @@
 from setuptools import setup
-from yeti_switch_api import __version__
+from packaging.version import Version
+import os
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -7,9 +8,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = fh.read().split("\n")
 
+version_string = os.environ.get("RELEASE_VERSION", "0.0.0.dev0")
+version = Version(version_string)
+
 setup(
     name="yeti_switch_api",
-    version=__version__,
+    version=str(version),
     author="Denys Talakevych",
     author_email="<senid231@gmail.com>",
     url="https://github.com/senid231/yeti-admin-python",

@@ -11,6 +11,7 @@ jobs:
     environment:
       name: pypi
       url: https://pypi.org/p/yeti-switch-api
+      RELEASE_VERSION: ${{github.ref}} 
     permissions:
       id-token: write
       contents: read
