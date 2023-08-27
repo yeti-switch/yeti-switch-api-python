@@ -1,4 +1,4 @@
-from ..base_model import BaseModel, AttributeField
+from ..base_model import BaseModel, AttributeField, RelationField
 
 
 class NumberlistItem(BaseModel):
@@ -19,4 +19,3 @@ class NumberlistItem(BaseModel):
     action_id = AttributeField('action-id')
     ACTION_REJECT = 1
     ACTION_ACCEPT = 2
-
