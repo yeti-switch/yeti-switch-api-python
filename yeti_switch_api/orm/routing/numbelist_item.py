@@ -5,7 +5,7 @@ class NumberlistItem(BaseModel):
     class Meta:
         path = "routing/numberlist-items"
         type = "numberlist-items"
-        
+
     key = AttributeField('key')
     number_min_length = AttributeField('number_min_length')
     number_max_length = AttributeField('number_max_length')

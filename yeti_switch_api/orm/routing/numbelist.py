@@ -5,7 +5,7 @@ class Numberlist(BaseModel):
     class Meta:
         path = 'routing/numberlists'
         type = 'numberlists'
-        
+
     name = AttributeField("name")
     default_action_id = AttributeField('action-id')
     DEFAULT_ACTION_REJECT = 1
