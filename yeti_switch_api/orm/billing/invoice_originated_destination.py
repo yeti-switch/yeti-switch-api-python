@@ -20,4 +20,3 @@ class InvoiceOriginatedDestination(BaseModel):
     last_call_at = AttributeField("last-call-at")
     rate = AttributeField("rate")
     spent = AttributeField("spent")
-

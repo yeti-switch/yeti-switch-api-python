@@ -36,7 +36,7 @@ class Invoice(BaseModel):
     terminated_calls_duration = AttributeField("terminated-calls-duration")
     terminated_billing_duration = AttributeField("terminated-billing-duration")
     terminated_first_call_at = AttributeField("terminated-first-call-at")
-    terminated_last_call_at =  AttributeField("terminated-last-call-at")
+    terminated_last_call_at = AttributeField("terminated-last-call-at")
 
     def creatable_fields(self):
         return [

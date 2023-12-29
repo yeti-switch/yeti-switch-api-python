@@ -8,4 +8,3 @@ class Country(BaseModel):
 
     name = AttributeField("name")
     host = AttributeField("iso2")
-
