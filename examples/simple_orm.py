@@ -3,14 +3,7 @@
 from yeti_switch_api.orm import OrmClient
 from yeti_switch_api.orm import Contractor
 from yeti_switch_api.orm.billing import Invoice
-from yeti_switch_api.orm.billing import InvoiceOriginatedDestination
-from yeti_switch_api.orm.billing import InvoiceOriginatedNetwork
-from yeti_switch_api.orm.billing import InvoiceTerminatedDestination
-from yeti_switch_api.orm.billing import InvoiceTerminatedNetwork
 from yeti_switch_api.orm.system import SmtpConnection
-from yeti_switch_api.orm.system import Country
-from yeti_switch_api.orm.system import Network
-from yeti_switch_api.orm.system import NetworkType
 
 # For demonstration purpose only: below lines logs all HTTP requests to stdout
 #
