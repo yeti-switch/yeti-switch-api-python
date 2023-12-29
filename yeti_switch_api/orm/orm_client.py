@@ -3,8 +3,16 @@ from jsonapi_requests.orm import OrmApi
 from ..common import build_client_config
 from .routing import Rateplan, RoutingTag
 from .billing import Contact
+from .billing import Invoice
+from .billing import InvoiceOriginatedDestination
+from .billing import InvoiceOriginatedNetwork
+from .billing import InvoiceTerminatedDestination
+from .billing import InvoiceTerminatedNetwork
 from .contractor import Contractor
 from .system import SmtpConnection
+from .system import Country
+from .system import Network
+from .system import NetworkType
 
 
 class OrmClient:
@@ -23,6 +31,14 @@ class OrmClient:
     def __register_models(cls):
         cls.__register_model(Contractor)
         cls.__register_model(Contact)
+        cls.__register_model(Invoice)
+        cls.__register_model(InvoiceOriginatedDestination)
+        cls.__register_model(InvoiceOriginatedNetwork)
+        cls.__register_model(InvoiceTerminatedDestination)
+        cls.__register_model(InvoiceTerminatedNetwork)
+        cls.__register_model(Country)
+        cls.__register_model(Network)
+        cls.__register_model(NetworkType)
         cls.__register_model(Rateplan)
         cls.__register_model(RoutingTag)
         cls.__register_model(SmtpConnection)

@@ -2,7 +2,15 @@
 
 from yeti_switch_api.orm import OrmClient
 from yeti_switch_api.orm import Contractor
+from yeti_switch_api.orm.billing import Invoice
+from yeti_switch_api.orm.billing import InvoiceOriginatedDestination
+from yeti_switch_api.orm.billing import InvoiceOriginatedNetwork
+from yeti_switch_api.orm.billing import InvoiceTerminatedDestination
+from yeti_switch_api.orm.billing import InvoiceTerminatedNetwork
 from yeti_switch_api.orm.system import SmtpConnection
+from yeti_switch_api.orm.system import Country
+from yeti_switch_api.orm.system import Network
+from yeti_switch_api.orm.system import NetworkType
 
 # For demonstration purpose only: below lines logs all HTTP requests to stdout
 #
@@ -19,10 +27,10 @@ from yeti_switch_api.orm.system import SmtpConnection
 # here library usage starts
 OrmClient(
     {
-        "API_ROOT": "http://127.0.0.1:4321/api/rest/admin",
+        "API_ROOT": "https://demo.yeti-switch.org/api/rest/admin",
         "AUTH_CREDS": {
             "login": "admin",
-            "password": "qweasd",
+            "password": "111111",
         },
         "VALIDATE_SSL": True,
         "TIMEOUT": 1,
@@ -50,15 +58,15 @@ new_contractor = Contractor.build(
         "name": "test_python",
         "enabled": True,
         "customer": True,
-    },
-    relationships={
-        "smtp-connection": {
-            "data": {
-                "type": SmtpConnection.Meta.type,
-                "id": found_smtp_connections[0].id,
-            }
-        }
-    },
+    }
+    #    relationships={
+    #        "smtp-connection": {
+    #            "data": {
+    #                "type": SmtpConnection.Meta.type,
+    #                "id": found_smtp_connections[0].id,
+    #            }
+    #        }
+    #   },
 )
 print("new_contractor before create", new_contractor.raw_object)
 new_contractor.create()
@@ -74,3 +82,12 @@ contractor = Contractor.find_by_id(new_contractor.id)
 print("contractor found", contractor.raw_object)
 
 print(contractor.creatable_fields())
+
+
+# get invoices
+invs = Invoice.get_list()
+if len(invs) == 0:
+    print("No invoices found")
+else:
+    for inv in invs:
+        print("Invoices found:", inv.raw_object)
