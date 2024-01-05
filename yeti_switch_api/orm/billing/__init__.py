@@ -1,4 +1,5 @@
 from .contact import Contact  # noqa: F401
+from .account import Account  # noqa: F401
 from .invoice import Invoice  # noqa: F401
 from .invoice_originated_destination import InvoiceOriginatedDestination  # noqa: F401
 from .invoice_originated_network import InvoiceOriginatedNetwork  # noqa: F401
