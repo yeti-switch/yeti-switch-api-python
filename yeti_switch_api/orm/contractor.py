@@ -25,8 +25,8 @@ class Contractor(BaseModel):
             "description",
             "address",
             "phones",
-            "external_id",
-            "smtp_connection",
+            "external-id",
+            "smtp-connection",
         ]
 
     def updatable_fields(self):
