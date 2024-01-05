@@ -1,7 +1,6 @@
 #!/bin/python3
 
-from yeti_switch_api.orm import OrmClient
-from yeti_switch_api.orm import Contractor
+from yeti_switch_api.orm import OrmClient, Contractor
 from yeti_switch_api.orm.billing import Invoice
 from yeti_switch_api.orm.system import SmtpConnection
 
@@ -51,6 +50,7 @@ new_contractor = Contractor.build(
         "name": "test_python",
         "enabled": True,
         "customer": True,
+        "external-id": 100123,
     }
     #    relationships={
     #        "smtp-connection": {
@@ -61,13 +61,15 @@ new_contractor = Contractor.build(
     #        }
     #   },
 )
-print("new_contractor before create", new_contractor.raw_object)
+new_contractor.smtp_connection = found_smtp_connections[0]
+print("new_contractor before create", new_contractor.raw_object_for_create())
 new_contractor.create()
 print("new_contractor after create", new_contractor.raw_object)
 
-print("new_contractor before update", new_contractor.raw_object)
+new_contractor.external_id = 100124
 new_contractor.vendor = True
 new_contractor.description = "test"
+print("new_contractor before update", new_contractor.raw_object_for_update())
 new_contractor.update()
 print("new_contractor after update", new_contractor.raw_object)
 
