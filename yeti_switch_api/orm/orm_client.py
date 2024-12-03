@@ -27,6 +27,7 @@ from .country import Country
 from .network import Network
 from .network_type import NetworkType
 
+
 class OrmClient:
     api_root = None
     auth = None
