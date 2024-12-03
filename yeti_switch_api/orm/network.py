@@ -1,9 +1,10 @@
 from ..base_model import BaseModel, AttributeField, RelationField  # noqa: F401
 
 
-class NetworkType(BaseModel):
+class Network(BaseModel):
     class Meta:
-        path = "system/network-types"
-        type = "network-types"
+        path = "networks"
+        type = "networks"
 
     name = AttributeField("name")
+    type = RelationField("network-type")

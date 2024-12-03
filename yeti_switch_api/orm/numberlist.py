@@ -3,7 +3,7 @@ from ..base_model import BaseModel, AttributeField
 
 class Numberlist(BaseModel):
     class Meta:
-        path = "routing/numberlists"
+        path = "numberlists"
         type = "numberlists"
 
     name = AttributeField("name")
