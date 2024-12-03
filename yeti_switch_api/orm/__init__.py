@@ -8,7 +8,7 @@ from .invoice_originated_network import InvoiceOriginatedNetwork  # noqa: F401
 from .invoice_terminated_destination import InvoiceTerminatedDestination  # noqa: F401
 from .invoice_terminated_network import InvoiceTerminatedNetwork  # noqa: F401
 
-from .customer_auth import CustomersAuth  # noqa: F401
+from .customers_auth import CustomersAuth  # noqa: F401
 from .dialpeer import Dialpeer  # noqa: F401
 from .numberlist import Numberlist  # noqa: F401
 from .numberlist_item import NumberlistItem  # noqa: F401
@@ -23,4 +23,3 @@ from .smtp_connection import SmtpConnection  # noqa: F401
 from .country import Country  # noqa: F401
 from .network import Network  # noqa: F401
 from .network_type import NetworkType  # noqa: F401
-

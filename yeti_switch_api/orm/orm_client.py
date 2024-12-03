@@ -11,7 +11,7 @@ from .invoice_originated_network import InvoiceOriginatedNetwork
 from .invoice_terminated_destination import InvoiceTerminatedDestination
 from .invoice_terminated_network import InvoiceTerminatedNetwork
 
-from .customer_auth import CustomersAuth
+from .customers_auth import CustomersAuth
 from .dialpeer import Dialpeer
 from .numberlist import Numberlist
 from .numberlist_item import NumberlistItem
@@ -51,7 +51,7 @@ class OrmClient:
         cls.__register_model(InvoiceOriginatedNetwork)
         cls.__register_model(InvoiceTerminatedDestination)
         cls.__register_model(InvoiceTerminatedNetwork)
-        cls.__register_model(CustomerAuth)
+        cls.__register_model(CustomersAuth)
         cls.__register_model(Dialpeer)
         cls.__register_model(Numberlist)
         cls.__register_model(NumberlistItem)
