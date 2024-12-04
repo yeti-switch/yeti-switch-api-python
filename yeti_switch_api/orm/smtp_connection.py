@@ -3,7 +3,7 @@ from ..base_model import BaseModel, AttributeField, RelationField  # noqa: F401
 
 class SmtpConnection(BaseModel):
     class Meta:
-        path = "system/smtp-connections"
+        path = "smtp-connections"
         type = "smtp-connections"
 
     name = AttributeField("name")

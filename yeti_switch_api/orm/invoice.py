@@ -3,7 +3,7 @@ from ..base_model import BaseModel, AttributeField, RelationField
 
 class Invoice(BaseModel):
     class Meta:
-        path = "billing/invoices"
+        path = "invoices"
         type = "invoices"
 
     account = RelationField("account")

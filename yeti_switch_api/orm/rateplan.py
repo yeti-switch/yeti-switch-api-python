@@ -3,7 +3,7 @@ from ..base_model import BaseModel, AttributeField
 
 class Rateplan(BaseModel):
     class Meta:
-        path = "routing/rateplans"
+        path = "rateplans"
         type = "rateplans"
 
     name = AttributeField("name")
