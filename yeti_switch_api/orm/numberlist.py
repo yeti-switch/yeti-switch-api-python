@@ -1,4 +1,4 @@
-from ..base_model import BaseModel, AttributeField
+from .base_model import BaseModel, AttributeField
 
 
 class Numberlist(BaseModel):

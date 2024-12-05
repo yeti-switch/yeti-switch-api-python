@@ -1,4 +1,4 @@
-from ..base_model import BaseModel, AttributeField, RelationField  # noqa: F401
+from .base_model import BaseModel, AttributeField, RelationField  # noqa: F401
 
 
 class Network(BaseModel):
