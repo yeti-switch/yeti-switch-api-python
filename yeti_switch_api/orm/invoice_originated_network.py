@@ -1,4 +1,4 @@
-from ..base_model import BaseModel, AttributeField, RelationField
+from .base_model import BaseModel, AttributeField, RelationField
 
 
 class InvoiceOriginatedNetwork(BaseModel):
