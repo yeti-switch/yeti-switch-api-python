@@ -4,7 +4,7 @@ from .base_model import BaseModel, AttributeField, RelationField
 class Account(BaseModel):
     class Meta:
         path = "accounts"
-        type = "account"
+        type = "accounts"
 
     contractor = RelationField("contractor")
     timezone = RelationField("timezone")
