@@ -7,6 +7,7 @@ class Account(BaseModel):
         type = "account"
 
     contractor = RelationField("contractor")
+    timezone = RelationField("timezone")
 
     name = AttributeField("name")
     balance = AttributeField("balance")
@@ -14,4 +15,4 @@ class Account(BaseModel):
     max_balance = AttributeField("max-balance")
 
     def creatable_fields(self):
-        return ["contractor", "min_balace", "max_balance"]
+        return ["name", "contractor", "timezone", "min_balance", "max_balance"]

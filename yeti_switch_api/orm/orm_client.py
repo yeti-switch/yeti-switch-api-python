@@ -26,6 +26,7 @@ from .smtp_connection import SmtpConnection
 from .country import Country
 from .network import Network
 from .network_type import NetworkType
+from .timezone import Timezone
 
 
 class OrmClient:
@@ -63,6 +64,7 @@ class OrmClient:
         cls.__register_model(Country)
         cls.__register_model(Network)
         cls.__register_model(NetworkType)
+        cls.__register_model(Timezone)
 
     @classmethod
     def __register_model(cls, model_class):
