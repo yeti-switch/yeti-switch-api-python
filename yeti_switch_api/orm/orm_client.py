@@ -16,6 +16,7 @@ from .dialpeer import Dialpeer
 from .numberlist import Numberlist
 from .numberlist_item import NumberlistItem
 from .rateplan import Rateplan
+from .routing_plan import RoutingPlan
 from .routing_tag import RoutingTag
 
 from .gateway import Gateway
@@ -26,6 +27,7 @@ from .smtp_connection import SmtpConnection
 from .country import Country
 from .network import Network
 from .network_type import NetworkType
+from .timezone import Timezone
 
 
 class OrmClient:
@@ -55,6 +57,7 @@ class OrmClient:
         cls.__register_model(Numberlist)
         cls.__register_model(NumberlistItem)
         cls.__register_model(Rateplan)
+        cls.__register_model(RoutingPlan)
         cls.__register_model(RoutingTag)
         cls.__register_model(Gateway)
         cls.__register_model(GatewayGroup)
@@ -63,6 +66,7 @@ class OrmClient:
         cls.__register_model(Country)
         cls.__register_model(Network)
         cls.__register_model(NetworkType)
+        cls.__register_model(Timezone)
 
     @classmethod
     def __register_model(cls, model_class):

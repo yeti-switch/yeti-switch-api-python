@@ -4,9 +4,10 @@ from .base_model import BaseModel, AttributeField, RelationField
 class Account(BaseModel):
     class Meta:
         path = "accounts"
-        type = "account"
+        type = "accounts"
 
     contractor = RelationField("contractor")
+    timezone = RelationField("timezone")
 
     name = AttributeField("name")
     balance = AttributeField("balance")
@@ -14,4 +15,4 @@ class Account(BaseModel):
     max_balance = AttributeField("max-balance")
 
     def creatable_fields(self):
-        return ["contractor", "min_balace", "max_balance"]
+        return ["name", "contractor", "timezone", "min-balance", "max-balance"]
