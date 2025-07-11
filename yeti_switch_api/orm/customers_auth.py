@@ -25,7 +25,7 @@ class CustomersAuth(BaseModel):
         return [
             "name",
             "enabled",
-            "src-numberlist"
+            "src-numberlist",
             "dst-numberlist",
             "customer",
             "account",
@@ -36,5 +36,5 @@ class CustomersAuth(BaseModel):
             "ip",
             "src-prefix",
             "dst-prefix",
-            "x-yeti-auth"
+            "x-yeti-auth",
         ]
