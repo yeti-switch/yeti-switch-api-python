@@ -15,4 +15,4 @@ class Account(BaseModel):
     max_balance = AttributeField("max-balance")
 
     def creatable_fields(self):
-        return ["name", "contractor", "timezone", "min_balance", "max_balance"]
+        return ["name", "contractor", "timezone", "min-balance", "max-balance"]
