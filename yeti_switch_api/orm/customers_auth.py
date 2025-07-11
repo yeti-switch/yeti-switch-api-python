@@ -10,7 +10,7 @@ class CustomersAuth(BaseModel):
     enabled = AttributeField("enabled")
     src_numberlist = RelationField("src-numberlist")
     dst_numberlist = RelationField("dst-numberlist")
-  
+ 
     customer = RelationField("customer")
     account = RelationField("account")
     rateplan = RelationField("rateplan")
@@ -40,5 +40,3 @@ class CustomersAuth(BaseModel):
             "dst-prefix",
             "x-yeti-auth"
         ]
-
-

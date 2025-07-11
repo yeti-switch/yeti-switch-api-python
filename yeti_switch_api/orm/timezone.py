@@ -1,4 +1,4 @@
-from .base_model import BaseModel, AttributeField, RelationField
+from .base_model import BaseModel, AttributeField
 
 
 class Timezone(BaseModel):
@@ -7,4 +7,3 @@ class Timezone(BaseModel):
         type = "timezones"
 
     name = AttributeField("name")
-
