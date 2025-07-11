@@ -13,7 +13,7 @@ class CustomersAuth(BaseModel):
     customer = RelationField("customer")
     account = RelationField("account")
     rateplan = RelationField("rateplan")
-    routing_plan = RelationField("routing-plan")
+    routing_plan = RelationField("routing_plan")
     gateway = RelationField("gateway")
     pop = RelationField("pop")
 
