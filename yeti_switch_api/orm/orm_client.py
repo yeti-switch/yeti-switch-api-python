@@ -16,6 +16,7 @@ from .dialpeer import Dialpeer
 from .numberlist import Numberlist
 from .numberlist_item import NumberlistItem
 from .rateplan import Rateplan
+from .routing_plan import RoutingPlan
 from .routing_tag import RoutingTag
 
 from .gateway import Gateway
@@ -56,6 +57,7 @@ class OrmClient:
         cls.__register_model(Numberlist)
         cls.__register_model(NumberlistItem)
         cls.__register_model(Rateplan)
+        cls.__register_model(RoutingPlan)
         cls.__register_model(RoutingTag)
         cls.__register_model(Gateway)
         cls.__register_model(GatewayGroup)

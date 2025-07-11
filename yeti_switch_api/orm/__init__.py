@@ -13,6 +13,7 @@ from .dialpeer import Dialpeer  # noqa: F401
 from .numberlist import Numberlist  # noqa: F401
 from .numberlist_item import NumberlistItem  # noqa: F401
 from .rateplan import Rateplan  # noqa: F401
+from .routing_plan import RoutingPlan  # noqa: F401
 from .routing_tag import RoutingTag  # noqa: F401
 
 from .gateway import Gateway  # noqa: F401
