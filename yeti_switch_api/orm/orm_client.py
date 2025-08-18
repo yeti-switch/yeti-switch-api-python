@@ -6,6 +6,7 @@ from .contractor import Contractor
 from .contact import Contact
 from .account import Account
 from .invoice import Invoice
+from .invoice_template import InvoiceTemplate
 from .invoice_originated_destination import InvoiceOriginatedDestination
 from .invoice_originated_network import InvoiceOriginatedNetwork
 from .invoice_terminated_destination import InvoiceTerminatedDestination
@@ -49,6 +50,7 @@ class OrmClient:
         cls.__register_model(Contact)
         cls.__register_model(Account)
         cls.__register_model(Invoice)
+        cls.__register_model(InvoiceTemplate)
         cls.__register_model(InvoiceOriginatedDestination)
         cls.__register_model(InvoiceOriginatedNetwork)
         cls.__register_model(InvoiceTerminatedDestination)

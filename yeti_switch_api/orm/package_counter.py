@@ -8,7 +8,8 @@ class PackageCounter(BaseModel):
     duration = AttributeField("duration")
     exclude = AttributeField("exclude")
     prefix = AttributeField("prefix")
-    service_id = AttributeField("service-id")
 
     account = RelationField("account")
     service = RelationField("service")
+
+
