@@ -28,6 +28,7 @@ from .country import Country
 from .network import Network
 from .network_type import NetworkType
 from .timezone import Timezone
+from .package_counter import PackageCounter
 
 
 class OrmClient:
@@ -67,6 +68,7 @@ class OrmClient:
         cls.__register_model(Network)
         cls.__register_model(NetworkType)
         cls.__register_model(Timezone)
+        cls.__register_model(PackageCounter)
 
     @classmethod
     def __register_model(cls, model_class):
