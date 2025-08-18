@@ -21,6 +21,9 @@ class CustomersAuth(BaseModel):
     dst_prefix = AttributeField("dst-prefix")
     x_yeti_auth = AttributeField("x-yeti-auth")
 
+    tag_action = RelationField("tag-action")
+    tag_action_value = AttributeField("tag-action-value")
+
     def creatable_fields(self):
         return [
             "name",
@@ -37,4 +40,9 @@ class CustomersAuth(BaseModel):
             "src-prefix",
             "dst-prefix",
             "x-yeti-auth",
+            "tag-action",
+            "tag-action-value"
         ]
+
+    def updatable_fields(self):
+        return self.creatable_fields()
