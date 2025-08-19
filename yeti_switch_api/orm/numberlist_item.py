@@ -29,19 +29,19 @@ class NumberlistItem(BaseModel):
 
     def creatable_fields(self):
         return [
-            "numberlist"
+            "numberlist",
             "key",
             "number-min-length",
             "number-max-length",
             "src-rewrite-rule",
             "src-rewrite-result",
-            "defer-src-rewrite"
+            "defer-src-rewrite",
             "dst-rewrite-rule",
             "dst-rewrite-result",
             "defer-dst-rewrite",
             "action-id",
             "tag-action",
-            "tag-action-value"
+            "tag-action-value",
         ]
 
     def updatable_fields(self):

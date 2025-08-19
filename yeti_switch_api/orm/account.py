@@ -40,25 +40,25 @@ class Account(BaseModel):
 
     def creatable_fields(self):
         return [
-           "external-id",
-           "uuid",
-           "name",
-           "contractor",
-           "timezone",
-           "invoice-template",
-           "min-balance",
-           "max-balance",
-           "vat",
-           "balance-low-threshold",
-           "balance-high-threshold",
-           "send-balance-notifications-to"
-           "destination-rate-limit",
-           "max-call-duration",
-           "origination-capacity",
-           "termination-capacity",
-           "total-capacity",
-           "invoice-period-id",
-           "send-invoices-to"
+            "external-id",
+            "uuid",
+            "name",
+            "contractor",
+            "timezone",
+            "invoice-template",
+            "min-balance",
+            "max-balance",
+            "vat",
+            "balance-low-threshold",
+            "balance-high-threshold",
+            "send-balance-notifications-to",
+            "destination-rate-limit",
+            "max-call-duration",
+            "origination-capacity",
+            "termination-capacity",
+            "total-capacity",
+            "invoice-period-id",
+            "send-invoices-to",
         ]
 
     def updatable_fields(self):

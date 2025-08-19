@@ -34,7 +34,7 @@ class Numberlist(BaseModel):
 
     def creatable_fields(self):
         return [
-            "name"
+            "name",
             "default-action-id",
             "tag-action",
             "tag-action-value",
@@ -46,7 +46,7 @@ class Numberlist(BaseModel):
             "default-dst-rewrite-result",
             "defer-dst-rewrite",
             "external-id",
-            "external-type"
+            "external-type",
         ]
 
     def updatable_fields(self):

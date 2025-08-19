@@ -41,7 +41,7 @@ class CustomersAuth(BaseModel):
             "dst-prefix",
             "x-yeti-auth",
             "tag-action",
-            "tag-action-value"
+            "tag-action-value",
         ]
 
     def updatable_fields(self):
