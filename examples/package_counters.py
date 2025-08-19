@@ -4,10 +4,7 @@ API_ROOT = "http://127.0.0.1:3000/api/rest/admin"
 USERNAME = "admin"
 PASSWORD = "111111"
 
-config = {
-    "API_ROOT": API_ROOT,
-    "AUTH_CREDS": {"login": USERNAME, "password": PASSWORD}
-}
+config = {"API_ROOT": API_ROOT, "AUTH_CREDS": {"login": USERNAME, "password": PASSWORD}}
 
 # Initialize ORM client (registers models)
 OrmClient(config)
