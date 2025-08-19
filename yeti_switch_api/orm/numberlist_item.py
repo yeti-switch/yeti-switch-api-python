@@ -24,7 +24,6 @@ class NumberlistItem(BaseModel):
     action_id = AttributeField("action-id")
     ACTION_REJECT = 1
     ACTION_ACCEPT = 2
-
     tag_action = RelationField("tag-action")
     tag_action_value = AttributeField("tag-action-value")
 

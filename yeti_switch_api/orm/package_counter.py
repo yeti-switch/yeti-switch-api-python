@@ -12,4 +12,3 @@ class PackageCounter(BaseModel):
 
     account = RelationField("account")
     service = RelationField("service")
-

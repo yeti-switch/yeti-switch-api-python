@@ -63,4 +63,3 @@ class Account(BaseModel):
 
     def updatable_fields(self):
         return self.creatable_fields()
-

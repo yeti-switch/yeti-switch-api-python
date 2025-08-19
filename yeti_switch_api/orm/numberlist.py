@@ -1,10 +1,13 @@
-from .base_model import BaseModel, AttributeField
+from .base_model import BaseModel, AttributeField, RelationField
 
 
 class Numberlist(BaseModel):
     class Meta:
         path = "numberlists"
         type = "numberlists"
+
+    external_id = AttributeField("external-id")
+    external_type = AttributeField("external-type")
 
     name = AttributeField("name")
     default_action = AttributeField("default-action-id")
@@ -22,9 +25,6 @@ class Numberlist(BaseModel):
     default_dst_rewrite_rule = AttributeField("default-dst-rewrite-rule")
     default_dst_rewrite_result = AttributeField("default-dst-rewrite-result")
     defer_dst_rewrite = AttributeField("defer-dst-rewrite")
-
-    external_id = AttributeField("external-id")
-    external_type = AttributeField("external-type")
 
     tag_action = RelationField("tag-action")
     tag_action_value = AttributeField("tag-action-value")
