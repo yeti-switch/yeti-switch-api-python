@@ -1,5 +1,6 @@
 from .base_model import BaseModel, AttributeField, RelationField
 
+
 class PackageCounter(BaseModel):
     class Meta:
         path = "package-counters"
@@ -11,5 +12,4 @@ class PackageCounter(BaseModel):
 
     account = RelationField("account")
     service = RelationField("service")
-
 

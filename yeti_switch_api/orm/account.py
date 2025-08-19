@@ -9,7 +9,7 @@ class Account(BaseModel):
     contractor = RelationField("contractor")
     timezone = RelationField("timezone")
 
-    external-id = AttributeField("external-id")
+    external_id = AttributeField("external-id")
     uuid = AttributeField("uuid")
 
     name = AttributeField("name")
