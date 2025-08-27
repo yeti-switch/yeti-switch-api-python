@@ -76,7 +76,7 @@ class CustomersAuth(BaseModel):
             "src-rewrite-rule",
             "src-rewrite-result",
             "dst-rewrite-rule",
-            "dst-rewrite-result"
+            "dst-rewrite-result",
         ]
 
     def updatable_fields(self):
