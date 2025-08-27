@@ -20,10 +20,10 @@ class CustomersAuth(BaseModel):
 
     pop = RelationField("pop")
     ip = AttributeField("ip")
+
     src_prefix = AttributeField("src-prefix")
     src_number_min_length = AttributeField("src-number-min-length")
     src_number_max_length = AttributeField("src-number-max-length")
-
     dst_prefix = AttributeField("dst-prefix")
     dst_number_min_length = AttributeField("dst-number-min-length")
     dst_number_max_length = AttributeField("dst-number-max-length")
@@ -44,7 +44,6 @@ class CustomersAuth(BaseModel):
     src_rewrite_result = AttributeField("src-rewrite-result")
     dst_rewrite_rule = AttributeField("dst-rewrite-rule")
     dst_rewrite_result = AttributeField("dst-rewrite-result")
-
 
     def creatable_fields(self):
         return [
