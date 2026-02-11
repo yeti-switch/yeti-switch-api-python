@@ -7,8 +7,8 @@ class Account(BaseModel):
         type = "accounts"
 
     contractor = RelationField("contractor")
-    timezone = RelationField("timezone")
 
+    timezone = AttributeField("timezone")
     external_id = AttributeField("external-id")
     uuid = AttributeField("uuid")
 
